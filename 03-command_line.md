@@ -98,7 +98,9 @@ So we pass three inputs separated by blanks as stdin to mkdir (which can only ta
 
 Examle from the website:
 `echo 'one two three' | xargs mkdir
+
 ls
+
 one two three`
  
 
