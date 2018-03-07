@@ -20,11 +20,18 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
-
-I'll do this online, just wanted to prove my method works. 
-
-...And edited it online. 
+pwd * show current working directory path
+mkdir dir_name * creating a directory
+rm -r dir_name * deleting a directory
+touch filename.ext * creating a file using `touch` command
+rm filename * deleting a file
+cp old_name.ext new_name.ext * renaming a file
+ls -a * listing hidden files
+cp filename.ext directory * copying a file from one directory to another
+cd path switches you into the directory you specify (paths are relative to current directory)
+ls lists the contents of the current directory
+ls -t lists contents ordered by modification date
+ls -l lists in long format
 
 ---
 
@@ -32,14 +39,19 @@ I'll do this online, just wanted to prove my method works.
 
 What do the following commands do:  
 `ls`  
+lists files in a directory
 `ls -a`  
+includes hidden files
 `ls -l`  
+lists in long format
 `ls -lh`  
-`ls -lah`  
+appears to have something to do with abbreviations.  numbers of bytes such as 4387 are abbreviated to 4.3k
+`ls -lah`
+lists in long format including hidden files with abbreviations
 `ls -t`  
+lists files ordered by modification date
 `ls -Glp`  
-
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+lists visible files in long format with directory names in blue (-G) followed by a "/" (-p) 
 
 ---
 
@@ -47,7 +59,16 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+'ls -R'
+lists contents and subdirectories
+'ls -r'
+lists contents in reverse order
+'ls -d' 
+displays only directories
+'ls -m' 
+lists contents as a list with comma delimiters
+'ls -u' 
+lists contents by access time, not creation timestamp
 
 ---
 
@@ -55,7 +76,20 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+xargs is a command which converts input from stdin to arguments to a command.  This is necessary because, while some commands such as grep can take input in several forms, others such as echo can only take input as arguments, not as stdin.  
 
+...better description from https://shapeshed.com/unix-xargs/
+
+"The xargs command in UNIX is a command line utility for building an execution pipeline from standard input. Whilst tools like grep can accept standard input as a parameter, many other tools cannot. Using xargs allows tools like echo and rm and mkdir to accept standard input as arguments."
+
+And that website goes on: 
+"By default xargs reads items from standard input as separated by blanks and executes a command once for each argument. In the following example standard input is piped to xargs and the mkdir command is run for each argument, creating three folders."
+
+So we pass three inputs separated by blanks as stdin to mkdir (which can only take arguments) and by inserting xargs we convert the input and allow mkdir to use it to creat ethree directories.  
+
+Examle from the website:
+echo 'one two three' | xargs mkdir
+ls
+one two three
  
 
