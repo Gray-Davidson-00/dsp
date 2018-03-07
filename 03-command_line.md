@@ -97,6 +97,7 @@ And that website goes on:
 So we pass three inputs separated by blanks as stdin to mkdir (which can only take arguments) and by inserting xargs we convert the input and allow mkdir to use it to creat ethree directories.  
 
 Examle from the website:
+
 `echo 'one two three' | xargs mkdir`
 
 `ls`
