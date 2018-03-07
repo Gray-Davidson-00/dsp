@@ -20,38 +20,48 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-pwd * show current working directory path
-mkdir dir_name * creating a directory
-rm -r dir_name * deleting a directory
-touch filename.ext * creating a file using `touch` command
-rm filename * deleting a file
-cp old_name.ext new_name.ext * renaming a file
-ls -a * listing hidden files
-cp filename.ext directory * copying a file from one directory to another
-cd path switches you into the directory you specify (paths are relative to current directory)
-ls lists the contents of the current directory
-ls -t lists contents ordered by modification date
-ls -l lists in long format
+'pwd' * show current working directory path
+
+'mkdir dir_name' * creating a directory
+
+'rm -r dir_name' * deleting a directory
+
+'touch filename.ext' * creating a file using `touch` command
+
+'rm filename' * deleting a file
+
+'cp old_name.ext new_name.ext' * renaming a file
+
+'ls -a' * listing hidden files
+
+'cp filename.ext directory' * copying a file from one directory to another
+
+'cd' * path switches you into the directory you specify (paths are relative to current directory)
+
+'ls' * lists the contents of the current directory
+
+'ls -t' * lists contents ordered by modification date
+
+'ls -l' * lists in long format
 
 ---
 
 ### Q2.  List Files in Unix   
 
 What do the following commands do:  
-`ls`  
-lists files in a directory
-`ls -a`  
-includes hidden files
-`ls -l`  
-lists in long format
-`ls -lh`  
-appears to have something to do with abbreviations.  numbers of bytes such as 4387 are abbreviated to 4.3k
-`ls -lah`
-lists in long format including hidden files with abbreviations
-`ls -t`  
-lists files ordered by modification date
-`ls -Glp`  
-lists visible files in long format with directory names in blue (-G) followed by a "/" (-p) 
+`ls`  lists files in a directory
+
+`ls -a`  includes hidden files
+
+`ls -l`  lists in long format
+
+`ls -lh`  appears to have something to do with abbreviations.  numbers of bytes such as 4387 are abbreviated to 4.3k
+
+`ls -lah`lists in long format including hidden files with abbreviations
+
+`ls -t`  lists files ordered by modification date
+
+`ls -Glp`  lists visible files in long format with directory names in blue (-G) followed by a "/" (-p) 
 
 ---
 
@@ -59,16 +69,15 @@ lists visible files in long format with directory names in blue (-G) followed by
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-'ls -R'
-lists contents and subdirectories
-'ls -r'
-lists contents in reverse order
-'ls -d' 
-displays only directories
-'ls -m' 
-lists contents as a list with comma delimiters
-'ls -u' 
-lists contents by access time, not creation timestamp
+'ls -R' lists contents and subdirectories
+
+'ls -r' lists contents in reverse order
+
+'ls -d'  displays only directories
+
+'ls -m'  lists contents as a list with comma delimiters
+
+'ls -u'  lists contents by access time, not creation timestamp
 
 ---
 
@@ -88,8 +97,8 @@ And that website goes on:
 So we pass three inputs separated by blanks as stdin to mkdir (which can only take arguments) and by inserting xargs we convert the input and allow mkdir to use it to creat ethree directories.  
 
 Examle from the website:
-echo 'one two three' | xargs mkdir
-ls
-one two three
+'echo 'one two three' | xargs mkdir'
+'ls'
+'one two three'
  
 
